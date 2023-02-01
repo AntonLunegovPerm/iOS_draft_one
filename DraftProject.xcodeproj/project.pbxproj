@@ -89,6 +89,13 @@
 		37815EA92986EE8600202D03 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37815E832986EE8500202D03 /* CustomTextField.swift */; };
 		37815EAA2986EE8600202D03 /* CustomPageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37815E842986EE8500202D03 /* CustomPageControl.swift */; };
 		37815EAB2986EE8600202D03 /* AppFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37815E852986EE8500202D03 /* AppFonts.swift */; };
+		37815EC92989594A00202D03 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37815EC82989594A00202D03 /* WebService.swift */; };
+		37815ECD29895A1F00202D03 /* Localize_Swift in Frameworks */ = {isa = PBXBuildFile; productRef = 37815ECC29895A1F00202D03 /* Localize_Swift */; };
+		37815ED029895A3700202D03 /* Reachability in Frameworks */ = {isa = PBXBuildFile; productRef = 37815ECF29895A3700202D03 /* Reachability */; };
+		37815ED229895AC300202D03 /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37815ED129895AC200202D03 /* Resource.swift */; };
+		37815ED629895B1C00202D03 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 37815ED529895B1C00202D03 /* Alamofire */; };
+		37815ED929895B9B00202D03 /* ParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37815ED829895B9B00202D03 /* ParameterEncoder.swift */; };
+		37815EDD29895D5A00202D03 /* APIResponseParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37815EDC29895D5A00202D03 /* APIResponseParser.swift */; };
 		A169A5FF28E9FDDB004ECC48 /* VpnManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A169A5FE28E9FDDB004ECC48 /* VpnManager.swift */; };
 		A169A60128E9FE50004ECC48 /* ReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A169A60028E9FE50004ECC48 /* ReachabilityManager.swift */; };
 		A169A60328EA0090004ECC48 /* UpdateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A169A60228EA0090004ECC48 /* UpdateManager.swift */; };
@@ -218,6 +225,10 @@
 		37815E832986EE8500202D03 /* CustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		37815E842986EE8500202D03 /* CustomPageControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomPageControl.swift; sourceTree = "<group>"; };
 		37815E852986EE8500202D03 /* AppFonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppFonts.swift; sourceTree = "<group>"; };
+		37815EC82989594A00202D03 /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
+		37815ED129895AC200202D03 /* Resource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resource.swift; sourceTree = "<group>"; };
+		37815ED829895B9B00202D03 /* ParameterEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParameterEncoder.swift; sourceTree = "<group>"; };
+		37815EDC29895D5A00202D03 /* APIResponseParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResponseParser.swift; sourceTree = "<group>"; };
 		A169A5FE28E9FDDB004ECC48 /* VpnManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VpnManager.swift; sourceTree = "<group>"; };
 		A169A60028E9FE50004ECC48 /* ReachabilityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachabilityManager.swift; sourceTree = "<group>"; };
 		A169A60228EA0090004ECC48 /* UpdateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateManager.swift; sourceTree = "<group>"; };
@@ -274,13 +285,16 @@
 				A169A61B28EA108B004ECC48 /* SwiftyUserDefaults in Frameworks */,
 				37815E4C2986EA1000202D03 /* RxCocoa in Frameworks */,
 				A169A61828EA1039004ECC48 /* SwiftKeychainWrapper in Frameworks */,
+				37815ED029895A3700202D03 /* Reachability in Frameworks */,
 				A1D2E75928E6CB6000FB2537 /* KeychainSwift in Frameworks */,
 				37815D1F2982649100202D03 /* RswiftLibrary in Frameworks */,
+				37815ED629895B1C00202D03 /* Alamofire in Frameworks */,
 				A169A62E28EA3464004ECC48 /* Swinject in Frameworks */,
 				A1D2E75128E6C96900FB2537 /* CombineMoya in Frameworks */,
 				A169A60D28EA0BF2004ECC48 /* Realm in Frameworks */,
 				37815E202985B02100202D03 /* SnapKit in Frameworks */,
 				37815E502986EA1000202D03 /* RxSwift in Frameworks */,
+				37815ECD29895A1F00202D03 /* Localize_Swift in Frameworks */,
 				A169A61E28EA116C004ECC48 /* SwiftyBeaver in Frameworks */,
 				37815DB329858FFD00202D03 /* FINNBottomSheet in Frameworks */,
 			);
@@ -534,6 +548,17 @@
 			path = CustomView;
 			sourceTree = "<group>";
 		};
+		37815EDB29895BA600202D03 /* WebService */ = {
+			isa = PBXGroup;
+			children = (
+				37815EC82989594A00202D03 /* WebService.swift */,
+				37815ED129895AC200202D03 /* Resource.swift */,
+				37815ED829895B9B00202D03 /* ParameterEncoder.swift */,
+				37815EDC29895D5A00202D03 /* APIResponseParser.swift */,
+			);
+			path = WebService;
+			sourceTree = "<group>";
+		};
 		A169A60828EA0AA1004ECC48 /* DataStorages */ = {
 			isa = PBXGroup;
 			children = (
@@ -714,6 +739,7 @@
 		A18E7F5C28F32C5A00DBE86A /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				37815EDB29895BA600202D03 /* WebService */,
 				A169A5FE28E9FDDB004ECC48 /* VpnManager.swift */,
 				A169A60028E9FE50004ECC48 /* ReachabilityManager.swift */,
 				A18E7F5A28F32C0800DBE86A /* ServerAPI.swift */,
@@ -807,6 +833,9 @@
 				37815E4B2986EA1000202D03 /* RxCocoa */,
 				37815E4D2986EA1000202D03 /* RxRelay */,
 				37815E4F2986EA1000202D03 /* RxSwift */,
+				37815ECC29895A1F00202D03 /* Localize_Swift */,
+				37815ECF29895A3700202D03 /* Reachability */,
+				37815ED529895B1C00202D03 /* Alamofire */,
 			);
 			productName = DraftProject;
 			productReference = A1D2E73828E6C78B00FB2537 /* DraftProject.app */;
@@ -848,6 +877,9 @@
 				37815DB129858FFD00202D03 /* XCRemoteSwiftPackageReference "BottomSheet" */,
 				37815E1E2985B02100202D03 /* XCRemoteSwiftPackageReference "SnapKit" */,
 				37815E4A2986EA1000202D03 /* XCRemoteSwiftPackageReference "RxSwift" */,
+				37815ECB29895A1F00202D03 /* XCRemoteSwiftPackageReference "Localize-Swift" */,
+				37815ECE29895A3700202D03 /* XCRemoteSwiftPackageReference "Reachability" */,
+				37815ED429895B1C00202D03 /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = A1D2E73928E6C78B00FB2537 /* Products */;
 			projectDirPath = "";
@@ -912,6 +944,7 @@
 				37815D242983A2DD00202D03 /* UIView.swift in Sources */,
 				37815D4B2983A69000202D03 /* String.swift in Sources */,
 				37815DAB2985896500202D03 /* CoordinatorFactory.swift in Sources */,
+				37815ED229895AC300202D03 /* Resource.swift in Sources */,
 				A169A5FF28E9FDDB004ECC48 /* VpnManager.swift in Sources */,
 				A18E7F5B28F32C0800DBE86A /* ServerAPI.swift in Sources */,
 				37815EA52986EE8600202D03 /* CustomSwitch.swift in Sources */,
@@ -961,6 +994,7 @@
 				37815E982986EE8600202D03 /* CustomTextViewWithLinkBuilder.swift in Sources */,
 				A18E7F4328F3154E00DBE86A /* ModulesFactory+Main.swift in Sources */,
 				37815EA82986EE8600202D03 /* CustomTextViewWithLink.swift in Sources */,
+				37815EC92989594A00202D03 /* WebService.swift in Sources */,
 				A18E7F3D28F312F500DBE86A /* ViewModel.swift in Sources */,
 				A169A60728EA0156004ECC48 /* Constants.swift in Sources */,
 				A169A60A28EA0AB0004ECC48 /* Realm.swift in Sources */,
@@ -980,11 +1014,13 @@
 				37815E8F2986EE8600202D03 /* LabelBuilderType.swift in Sources */,
 				A169A63628EA374A004ECC48 /* Analytics.swift in Sources */,
 				37815EA12986EE8600202D03 /* LanguageTextFieldBuilder.swift in Sources */,
+				37815EDD29895D5A00202D03 /* APIResponseParser.swift in Sources */,
 				37815D562983AD4A00202D03 /* Array.swift in Sources */,
 				A18E7F2B28F30F9300DBE86A /* AuthorizationCoordinator.swift in Sources */,
 				37815E962986EE8600202D03 /* TextViewBuilderType.swift in Sources */,
 				A18E7F2628F2FD9000DBE86A /* ModulesFactory.swift in Sources */,
 				37815E8B2986EE8600202D03 /* SwitchBuilder.swift in Sources */,
+				37815ED929895B9B00202D03 /* ParameterEncoder.swift in Sources */,
 				37815E4329867AE700202D03 /* ExamplePresenter.swift in Sources */,
 				A18E7F4728F315DB00DBE86A /* MainFactoryProtocol.swift in Sources */,
 				A18E7F4C28F3171D00DBE86A /* MainViewModel.swift in Sources */,
@@ -1248,6 +1284,30 @@
 				minimumVersion = 6.0.0;
 			};
 		};
+		37815ECB29895A1F00202D03 /* XCRemoteSwiftPackageReference "Localize-Swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/marmelroy/Localize-Swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+		37815ECE29895A3700202D03 /* XCRemoteSwiftPackageReference "Reachability" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ashleymills/Reachability.swift";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		37815ED429895B1C00202D03 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 		A169A60B28EA0BF2004ECC48 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/realm/realm-swift.git";
@@ -1340,6 +1400,21 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 37815E4A2986EA1000202D03 /* XCRemoteSwiftPackageReference "RxSwift" */;
 			productName = RxSwift;
+		};
+		37815ECC29895A1F00202D03 /* Localize_Swift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 37815ECB29895A1F00202D03 /* XCRemoteSwiftPackageReference "Localize-Swift" */;
+			productName = Localize_Swift;
+		};
+		37815ECF29895A3700202D03 /* Reachability */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 37815ECE29895A3700202D03 /* XCRemoteSwiftPackageReference "Reachability" */;
+			productName = Reachability;
+		};
+		37815ED529895B1C00202D03 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 37815ED429895B1C00202D03 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
 		};
 		A169A60C28EA0BF2004ECC48 /* Realm */ = {
 			isa = XCSwiftPackageProductDependency;
