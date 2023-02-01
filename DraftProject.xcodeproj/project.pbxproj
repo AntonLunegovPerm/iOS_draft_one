@@ -96,6 +96,8 @@
 		37815ED629895B1C00202D03 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 37815ED529895B1C00202D03 /* Alamofire */; };
 		37815ED929895B9B00202D03 /* ParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37815ED829895B9B00202D03 /* ParameterEncoder.swift */; };
 		37815EDD29895D5A00202D03 /* APIResponseParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37815EDC29895D5A00202D03 /* APIResponseParser.swift */; };
+		37815EE0298A8CA800202D03 /* ProductUpdateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37815EDF298A8CA800202D03 /* ProductUpdateManager.swift */; };
+		37815EE5298A8D5400202D03 /* ProductListUpdating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37815EE4298A8D5400202D03 /* ProductListUpdating.swift */; };
 		A169A5FF28E9FDDB004ECC48 /* VpnManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A169A5FE28E9FDDB004ECC48 /* VpnManager.swift */; };
 		A169A60128E9FE50004ECC48 /* ReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A169A60028E9FE50004ECC48 /* ReachabilityManager.swift */; };
 		A169A60328EA0090004ECC48 /* UpdateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A169A60228EA0090004ECC48 /* UpdateManager.swift */; };
@@ -229,6 +231,8 @@
 		37815ED129895AC200202D03 /* Resource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resource.swift; sourceTree = "<group>"; };
 		37815ED829895B9B00202D03 /* ParameterEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParameterEncoder.swift; sourceTree = "<group>"; };
 		37815EDC29895D5A00202D03 /* APIResponseParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResponseParser.swift; sourceTree = "<group>"; };
+		37815EDF298A8CA800202D03 /* ProductUpdateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductUpdateManager.swift; sourceTree = "<group>"; };
+		37815EE4298A8D5400202D03 /* ProductListUpdating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListUpdating.swift; sourceTree = "<group>"; };
 		A169A5FE28E9FDDB004ECC48 /* VpnManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VpnManager.swift; sourceTree = "<group>"; };
 		A169A60028E9FE50004ECC48 /* ReachabilityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachabilityManager.swift; sourceTree = "<group>"; };
 		A169A60228EA0090004ECC48 /* UpdateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateManager.swift; sourceTree = "<group>"; };
@@ -559,6 +563,14 @@
 			path = WebService;
 			sourceTree = "<group>";
 		};
+		37815EE3298A8D4000202D03 /* ProductUpdate */ = {
+			isa = PBXGroup;
+			children = (
+				37815EE4298A8D5400202D03 /* ProductListUpdating.swift */,
+			);
+			path = ProductUpdate;
+			sourceTree = "<group>";
+		};
 		A169A60828EA0AA1004ECC48 /* DataStorages */ = {
 			isa = PBXGroup;
 			children = (
@@ -750,7 +762,9 @@
 		A1B703B428E6E42A00AEFD00 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				37815EE3298A8D4000202D03 /* ProductUpdate */,
 				A169A60628EA0156004ECC48 /* Constants.swift */,
+				37815EDF298A8CA800202D03 /* ProductUpdateManager.swift */,
 				A169A60228EA0090004ECC48 /* UpdateManager.swift */,
 				A169A60428EA00DD004ECC48 /* AppRateManager.swift */,
 				A169A62A28EA32DE004ECC48 /* NotificationsManager.swift */,
@@ -979,6 +993,7 @@
 				A18E7F5028F31BE400DBE86A /* SessionManager.swift in Sources */,
 				A169A60528EA00DD004ECC48 /* AppRateManager.swift in Sources */,
 				37815E9E2986EE8600202D03 /* StackViewBuilderType.swift in Sources */,
+				37815EE0298A8CA800202D03 /* ProductUpdateManager.swift in Sources */,
 				37815E992986EE8600202D03 /* CustomIconImageViewBuilder.swift in Sources */,
 				37815D4E2983A84D00202D03 /* CryptoAlgorithm.swift in Sources */,
 				37815EAB2986EE8600202D03 /* AppFonts.swift in Sources */,
@@ -1016,6 +1031,7 @@
 				37815EA12986EE8600202D03 /* LanguageTextFieldBuilder.swift in Sources */,
 				37815EDD29895D5A00202D03 /* APIResponseParser.swift in Sources */,
 				37815D562983AD4A00202D03 /* Array.swift in Sources */,
+				37815EE5298A8D5400202D03 /* ProductListUpdating.swift in Sources */,
 				A18E7F2B28F30F9300DBE86A /* AuthorizationCoordinator.swift in Sources */,
 				37815E962986EE8600202D03 /* TextViewBuilderType.swift in Sources */,
 				A18E7F2628F2FD9000DBE86A /* ModulesFactory.swift in Sources */,
