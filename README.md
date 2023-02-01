@@ -11,7 +11,7 @@
 
 ## UI Kit(Designe-system)
 
-Для сборки UI компонента нужно инициализировать сборщик и создаваемый компонент, определить свойства компонента и собрать его. 
+#### Для сборки UI компонента нужно инициализировать сборщик и создаваемый компонент, определить свойства компонента и собрать его. 
 Для данных действий определены 2 метода:
 
 * статический метод для начала сборки, который должен вернуть ссылку на сборщик, в котором произойдет создание компонента (startBuild);
@@ -26,7 +26,7 @@ protocol UIBuilderType where View: UIView {
 }
 ```
 
-Для всех UI компонентов были выделены несколько свойств:
+#### Для всех UI компонентов были выделены несколько свойств:
 * translatesAutoresizingMaskIntoConstraints;
 * backgroundColor;
 * cornerRadius;
@@ -41,7 +41,9 @@ protocol UIViewBuilderType: UIBuilderType {
 }
 ```
 
-Для дизайн системы можно выделить некоторые стили для каждого или некоторых UI компонентов. Для реализации стилей есть протокол StyleBuilder, который отвечает за применение стиля на компонент. 
+#### Для дизайн системы можно выделить некоторые стили для каждого или некоторых UI компонентов. Для реализации стилей есть протокол StyleBuilder, который отвечает за применение стиля на компонент. 
+
+Протокол StyleBuilder для применения стиля на компонент:
 
 ```
 protocol StyleBuilder {
@@ -51,9 +53,29 @@ protocol StyleBuilder {
 }
 ```
 
+Реализация протокола StyleBuilder для UILabel: 
+```
+enum LabelStyle {
+    case error
+}
+ 
+extension LabelBuilder: StyleBuilder {
+    func setStyle(_ style: LabelStyle) -> Self {
+        switch style {
+            case .error:
+                // применение стиля для UILabel
+                label.textColor = color
+                label.textAlignment = .left
+                label.font = font
+        }
+    }
+}
+```
+
 ## Пример сборки UI компонента
 
-Пример UI компонента UILabel с применением стиля:
+#### Пример UI компонента UILabel с применением стиля. 
+Стиль объединяет в себе цвет и шрифт label, который применяется во всём приложение.
 
 
 ```
@@ -63,9 +85,8 @@ errorLabel = LabelBuilder.startBuild()
                 .setNumberOfLines(0)
                 .build()
 ```
-Стиль объединяет в себе цвет и шрифт лайбла, который применяется во всём приложение.
 
-Пример UI компонента UILabel без стиля: 
+#### Пример UI компонента UILabel без стиля: 
 ```
 valueLabel = LabelBuilder.startBuild()
             .useAutoLayout()
@@ -76,8 +97,25 @@ valueLabel = LabelBuilder.startBuild()
             .build()
 ```
 
+## Использование AutoLayout на UI компонентах
 
+При использование anchor в коде необходимо вызывать метод useAutoLayout из протокола UIViewBuilderType. 
 
+В некоторых сборщиках UI компонентов отсутсвует данный метод, так как внутри компонента translatesAutoresizingMaskIntoConstraints выставлен на false, либо внутри реализации компонента использован фреймворк SnapKit, который выставляет флаг на false при создание constraints. 
 
+Если вы используете фреймворк SnapKit для создания constraints, вызов метода useAutoLayout избыточен.
 
+Пример использования фреймворка SnapKit со сборщиком компонентов:
+
+```
+imageView = ImageViewBuilder.startBuild()
+                .setContentMode(.scaleAspectFit)
+                .build()
+         
+addSubview(imageView)
+imageView.snp.makeConstraints { make in
+    make.centerX.centerY.equalToSuperview()
+    make.size.equalTo(sizeImage)
+}
+```
 
