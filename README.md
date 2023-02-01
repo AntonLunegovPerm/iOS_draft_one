@@ -2,10 +2,11 @@
 Привет! Это шаблонный проект, который включает в себя:
 * Примеры архитектур VIPER и MVVM;
 * Настроенный CI на fastlane + gitlab-ci;
-* Design-систему;
+* WebService с использованием Single(RxSwift);
 * Часто используемые сервисы и менеджеры;
-* Кастомизируем MapTextPinDrawer
+* Кастомизируемый бабл MapTextPinDrawer для отрисовки на картах;
 * Часто используемые Extensions;
+* Design-систему.
 
 
 ## UI Kit(Designe-system)
